@@ -26,8 +26,10 @@ RUN rpm -ivh https://downloads.sourceforge.net/project/kenzy/special/C7/x86_64/r
 
 COPY etc/postfix/main.cf /etc/postfix/main.cf
 
-WORKDIR /usr/local/src/
+RUN git clone https://github.com/kzm0211/pmilter.git /usr/local/src/pmilter/
 
-RUN git clone https://github.com/matsumotory/pmilter.git
+WORKDIR /usr/local/src/pmilter
+
+RUN make mruby && make
 
 CMD ["/sbin/init"]
