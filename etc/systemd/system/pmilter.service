@@ -1,0 +1,13 @@
+[Unit]
+Description = pmilter daemon
+
+[Service]
+ExecStart = /usr/local/src/pmilter/pmilter -c /usr/local/src/pmilter/pmilter.conf
+ExecStop = /bin/rm -f /var/spool/postfix/pmilter/pmilter.sock
+Restart = always
+User = postfix
+Group = postfix
+Type = simple
+
+[Install]
+WantedBy = multi-user.target

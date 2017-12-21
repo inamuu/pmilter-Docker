@@ -32,4 +32,6 @@ WORKDIR /usr/local/src/pmilter
 
 RUN make mruby && make
 
+COPY etc/systemd/system/pmilter.service /etc/systemd/system/pmilter.service
+
 CMD ["/sbin/init"]
