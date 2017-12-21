@@ -12,5 +12,5 @@ $ docker build -t pmilter .
 ### Run container
 
 ```sh
-$ docker run --name pmilter -p 10025:25 --privileged -dti pmilter /sbin/init
+$ docker run --name pmilter --hostname pmilter.local -p 10025:25 --privileged -dti pmilter /sbin/init
 ```
