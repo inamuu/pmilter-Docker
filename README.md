@@ -1,7 +1,7 @@
 ### Test pmilter
 
-OS: CentOS
-MTA: postfix
+- CentOS
+- postfix
 
 ### Build
 
